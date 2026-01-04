@@ -12,7 +12,7 @@
   --color-gold-800: #6f4f2e;
   --color-gold-900: #5c4229;
 
-  --font-sans: var(--font-inter);
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: var(--font-playfair);
 }
 
@@ -21,5 +21,5 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
 }
