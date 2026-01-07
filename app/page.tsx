@@ -13,7 +13,7 @@ const Navbar = () => {
     { id: 'home', label: 'HOME', href: '#', isPage: false },
     { id: 'services', label: 'SERVICES', href: '#services', isPage: false },
     { id: 'how-we-work', label: 'HOW WE WORK', href: '#how-we-work', isPage: false },
-    { id: 'team', label: 'OUR TEAM', href: '/team', isPage: true },
+    { id: 'team', label: 'TEAM', href: '/team', isPage: true },
     { id: 'insights', label: 'INSIGHTS', href: '#insights', isPage: false },
     { id: 'speaking', label: 'SPEAKING & WEBINARS', href: '#speaking', isPage: false },
   ];
@@ -80,9 +80,8 @@ const Hero = () => (
         Stronger leaders.<br />
         Deeper impact.
       </h1>
-      <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-        Amazing leaders take on tremendous responsibility.
-        They drive results, navigate uncertainty, and lead their teams day in and day out.
+      <p className="text-xl md:text-2xl text-gold-400 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+        Helping leaders magnify their impact while staying aligned with what matters most.
       </p>
 
       <button className="group relative px-8 py-3 bg-transparent border border-white/40 hover:border-white rounded-full text-white font-semibold tracking-wider transition-all hover:bg-white/10 backdrop-blur-sm overflow-hidden">
@@ -98,29 +97,29 @@ const Services = () => (
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <h2 className="font-serif text-4xl md:text-5xl text-white max-w-lg leading-tight">
-          Great leaders know that sustained success requires <span className="text-gold-400">clarity, resilience, and the right strategies</span> to navigate complexity.
+          Sustained leadership success requires <span className="text-gold-400">clarity, resilience, and the ability to focus on what matters most</span> while building systems for everything else.
         </h2>
         <p className="text-gray-300 max-w-md text-base md:text-lg leading-relaxed">
-          Whether leaders need short-term focus or deeper, ongoing support, we offer three tailored ways to engage aligned to their goals, capacity, and where they are in their journey.
+          Leaders engage with Milestone Leadership in different ways, depending on their goals, capacity, and the challenges they&apos;re facing. We offer three ways to work together.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
           {
-            title: "Balanced Leader Coaching",
-            desc: "For leaders or teams focused on integrating wellness and resilience into how they work and lead, we support you with a focused, time-bound engagement designed to help you restore balance across all dimensions of your life.",
-            sub: "Ideal for leaders who are feeling burned out, stretched too thin, or out of alignment."
+            title: "Leadership Focus Coaching",
+            desc: "Leadership Focus Coaching is for leaders who want to elevate their effectiveness, expand their influence, and operate more strategically. We focus on strengthening leadership judgment, communication, and decision-making so leaders can have greater impact across their teams and organizations. The work helps leaders move from execution-heavy roles to higher-leverage leadership.",
+            sub: "For leaders who need to clarify priorities, reduce noise, and focus their time and energy where it matters most."
           },
           {
-            title: "Leadership Coaching",
-            desc: "Ongoing coaching for senior and social impact-driven leaders who want to grow with intention. We'll work together to build clarity, resilience, and strategic focus so you can sharpen your leadership impact.",
-            sub: "Ideal for experienced leaders navigating complexity, stepping into expanded roles, or seeking to lead more effectively."
+            title: "Sustained Impact Coaching",
+            desc: "Sustained Impact Coaching supports leaders who are finding it difficult to elevate—or maintain—their level of impact without compromising their physical, mental, or social health. This work helps leaders align ambition with capacity, building habits and rhythms that support high performance over time. The goal is impact that is not only meaningful, but sustainable.",
+            sub: "For leaders who want to increase their impact without sacrificing their health, relationships, or long-term effectiveness."
           },
           {
-            title: "Fractional Exd create lasting impact",
-            desc: "For leaders or teams focused on integrating wellness and resilience into how they work and lead, we support you with a focused, time-bound engagement designed to help you restore balance across all dimensions of your life.",
-            sub: "Ideal for leaders who are feeling burned out, stretched too thin, or out of alignment especially those who've put the business first."
+            title: "Fractional Leadership Partnership",
+            desc: "The Fractional Leadership Partnership is for leaders and organizations that need more than coaching—they need help increasing leverage. We work together to design systems, decision frameworks, and operating rhythms that reduce dependency on the leader and allow impact to scale. This partnership is especially valuable during periods of growth, transition, or when launching something new.",
+            sub: "For leaders and organizations who need support building systems, leverage, and capacity to support elevated leadership impact."
           }
         ].map((service, idx) => (
           <div key={idx} className="bg-slate-800/50 border border-slate-700 p-8 rounded-2xl hover:border-gold-400/50 transition-colors group h-full flex flex-col">
@@ -143,29 +142,34 @@ const HowWeWork = () => (
       <div className="text-center mb-20">
         <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">How We Work Together</h2>
         <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-          A simple, intentional process designed to meet you where you are and move you forward.
+          A simple, intentional approach that brings clarity, builds momentum, and supports sustainable progress.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
         {/* Connecting line for desktop */}
-        <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-[2px] bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
+        <div className="hidden md:block absolute top-16 left-1/8 right-1/8 h-[2px] bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
 
         {[
           {
             step: "01",
-            title: "Lorem Ipsum",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Align on What Matters",
+            desc: "We start by getting aligned on what impact means right now—professionally and personally. This includes priorities, expectations, and what success looks like, not just in theory."
           },
           {
             step: "02",
-            title: "Dolor Sit Amet",
-            desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            title: "Establish the Baseline",
+            desc: "We take an honest look at where things stand today: strengths, development areas, overall wellness, current demands, and what's working well—or not. This also includes being explicit about where you do want to grow and where you intentionally don't and anything being explicitly asked of you professionally or personally."
           },
           {
             step: "03",
-            title: "Consectetur Elit",
-            desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            title: "Design a Focused Plan",
+            desc: "With goals and context in place, we design a focused plan that prioritizes the highest-leverage actions. When needed, this includes adjusting habits, decision-making approaches, or systems to create momentum without compromising what's important outside of work."
+          },
+          {
+            step: "04",
+            title: "Build Momentum Over Time",
+            desc: "We work together through regular conversations, reflection, and course correction. The emphasis is on sustained progress, adapting as conditions change and reinforcing what's working."
           }
         ].map((item, idx) => (
           <div key={idx} className="relative group">
@@ -177,7 +181,7 @@ const HowWeWork = () => (
             {/* Content card */}
             <div className="text-center px-4">
               <h3 className="font-serif text-2xl text-white mb-4">{item.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+              <p className="text-gray-400 leading-relaxed text-sm">{item.desc}</p>
             </div>
           </div>
         ))}
@@ -194,23 +198,27 @@ const Benefits = () => (
         {/* Left Side with Title and Cards */}
         <div>
           <h2 className="font-serif text-gold-400 text-3xl mb-12">When we work together, you will:</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6">
             {[
               {
-                title: "Gain Clarity & Focus",
-                text: "Cut through the noise, set the right priorities, and make better decisions with confidence."
+                title: "Gain clarity on what truly matters",
+                text: "Get clear on priorities, expectations, and where your time and energy will have the greatest impact—so you're no longer reacting to everything."
               },
               {
-                title: "Build Resilience & Sustainability",
-                text: "Develop the mindset, habits, and systems to lead effectively without burning out."
+                title: "Operate with greater focus and strategic intent",
+                text: "Shift from execution-heavy work to higher-leverage leadership, making decisions with confidence and purpose."
               },
               {
-                title: "Navigate Complexity with Confidence",
-                text: "Tackle challenges head-on with practical strategies tailored to your goals."
+                title: "Sustain elevated impact without burning out",
+                text: "Build the habits, rhythms, and boundaries that allow you to perform at a high level while protecting your health, energy, and relationships."
               },
               {
-                title: "Create Meaningful Impact",
-                text: "Lead in a way that drives results, strengthens teams, and sustains long-term success."
+                title: "Increase your influence and effectiveness as a leader",
+                text: "Strengthen judgment, communication, and presence so your leadership extends beyond what you personally execute."
+              },
+              {
+                title: "Create momentum that lasts",
+                text: "Put the right structures, support, and practices in place to maintain progress over time—even as conditions change."
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl backdrop-blur-sm">
