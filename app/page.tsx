@@ -14,8 +14,8 @@ const Navbar = () => {
     { id: 'services', label: 'SERVICES', href: '#services', isPage: false },
     { id: 'how-we-work', label: 'HOW WE WORK', href: '#how-we-work', isPage: false },
     { id: 'team', label: 'TEAM', href: '/team', isPage: true },
-    { id: 'insights', label: 'INSIGHTS', href: '#insights', isPage: false },
-    { id: 'speaking', label: 'SPEAKING & WEBINARS', href: '#speaking', isPage: false },
+    { id: 'insights', label: 'INSIGHTS', href: '/blog', isPage: true },
+    { id: 'speaking', label: 'SPEAKING & EVENTS', href: '#speaking', isPage: false },
   ];
 
   return (
@@ -275,11 +275,11 @@ const Insights = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {[
-          { img: "/pic2.jpg", title: "Navigating the Unknown" },
-          { img: "/pic3.jpg", title: "Building Resilient Teams" },
-          { img: "/pic4.jpg", title: "Leading with Purpose" }
+          { img: "/pic2.jpg", title: "Navigating the Unknown", slug: "navigating-the-unknown", category: "Leadership", excerpt: "How to maintain composure and direction when the path ahead isn't clear." },
+          { img: "/pic3.jpg", title: "Building Resilient Teams", slug: "building-resilient-teams", category: "Teams", excerpt: "The foundations of team resilience and how to cultivate an environment where your people can weather any storm." },
+          { img: "/pic4.jpg", title: "Leading with Purpose", slug: "leading-with-purpose", category: "Purpose", excerpt: "Purpose-driven leadership isn't just a buzzword—it's the key to sustainable success." }
         ].map((item, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <Link key={idx} href={`/blog/${item.slug}`} className="group cursor-pointer block">
             <div className="relative h-64 w-full rounded-t-2xl overflow-hidden mb-4">
                <Image
                   src={item.img}
@@ -289,18 +289,18 @@ const Insights = () => (
                />
             </div>
             <div className="p-4 bg-white/5 rounded-b-2xl border border-white/10 hover:border-gold-400/30 transition-colors">
-              <span className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Leadership</span>
+              <span className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">{item.category}</span>
               <h3 className="font-serif text-xl text-white mb-2 group-hover:text-gold-400 transition-colors">{item.title}</h3>
-              <p className="text-gray-200 text-sm line-clamp-2">How to maintain composure and direction when the path ahead isn&apos;t clear.</p>
+              <p className="text-gray-200 text-sm line-clamp-2">{item.excerpt}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       <div className="text-center mt-12">
-        <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
-          SCHEDULE A CALL
-        </button>
+        <Link href="/blog" className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide inline-block">
+          VIEW ALL ARTICLES
+        </Link>
       </div>
     </div>
   </section>
