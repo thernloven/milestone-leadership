@@ -80,7 +80,7 @@ const Hero = () => (
         Stronger leaders.<br />
         Deeper impact.
       </h1>
-      <p className="text-xl md:text-2xl text-gold-400 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+      <p className="text-xl md:text-2xl text-stone-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
         Helping leaders magnify their impact while staying aligned with what matters most.
       </p>
 
@@ -130,6 +130,12 @@ const Services = () => (
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="text-center mt-12">
+        <a href="mailto:contact@milestoneleadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
+          GET IN TOUCH
+        </a>
       </div>
     </div>
   </section>
@@ -186,19 +192,24 @@ const HowWeWork = () => (
           </div>
         ))}
       </div>
+
+      <div className="text-center mt-16">
+        <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
+          SCHEDULE A CALL
+        </button>
+      </div>
     </div>
   </section>
 );
 
 /* --- BENEFITS SECTION --- */
 const Benefits = () => (
-  <section className="bg-slate-900 py-20 px-4">
+  <section className="bg-slate-900 py-12 px-4">
     <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* Left Side with Title and Cards */}
-        <div>
-          <h2 className="font-serif text-gold-400 text-3xl mb-12">When we work together, you will:</h2>
-          <div className="flex flex-col gap-6">
+      <h2 className="font-serif text-gold-400 text-2xl mb-6">When we work together, you will:</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* Left Side with Cards */}
+        <div className="flex flex-col gap-3">
             {[
               {
                 title: "Gain clarity on what truly matters",
@@ -221,16 +232,15 @@ const Benefits = () => (
                 text: "Put the right structures, support, and practices in place to maintain progress over time—even as conditions change."
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl backdrop-blur-sm">
-                <h3 className="font-serif text-gold-400 text-xl mb-3">{item.title}</h3>
+              <div key={idx} className="bg-slate-800/40 border border-slate-700/50 p-4 rounded-xl backdrop-blur-sm">
+                <h3 className="font-serif text-gold-400 text-lg mb-1">{item.title}</h3>
                 <p className="text-gray-300 text-sm">{item.text}</p>
               </div>
             ))}
-          </div>
         </div>
 
         {/* Right Image */}
-        <div className="relative h-[600px] w-full rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl">
+        <div className="relative h-[500px] w-full rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl">
           <Image
             src="/pic1.jpg"
             alt="Success Hiker"
@@ -238,6 +248,12 @@ const Benefits = () => (
             className="object-cover"
           />
         </div>
+      </div>
+
+      <div className="text-center mt-10">
+        <a href="mailto:contact@milestoneleadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
+          GET IN TOUCH
+        </a>
       </div>
     </div>
   </section>
@@ -280,6 +296,12 @@ const Insights = () => (
           </div>
         ))}
       </div>
+
+      <div className="text-center mt-12">
+        <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
+          SCHEDULE A CALL
+        </button>
+      </div>
     </div>
   </section>
 );
@@ -302,8 +324,11 @@ const Speaking = () => (
         <h2 className="font-serif text-4xl md:text-6xl text-white mb-6">
           Inspire. Educate. Empower.
         </h2>
-        <p className="text-gray-200 text-lg leading-relaxed mb-8">
-          Whether it&apos;s a room full of executives or a remote team tuning in, Mike brings energy, clarity, and hard-earned insight to every session. His talks on leadership, resilience, and growth are built to spark reflection and drive action.
+        <p className="text-gray-200 text-lg leading-relaxed mb-4">
+          Talks and workshops on leadership, resilience, and building impact that lasts.
+        </p>
+        <p className="text-gray-300 text-base leading-relaxed mb-8">
+          Explore recordings from past talks and workshops, or sign up to be notified about upcoming events.
         </p>
         <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
           SCHEDULE A CALL
