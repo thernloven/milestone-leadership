@@ -97,37 +97,36 @@ const Services = () => (
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <h2 className="font-serif text-4xl md:text-5xl text-white max-w-lg leading-tight">
-          Sustained leadership success requires <span className="text-gold-400">clarity, resilience, and the ability to focus on what matters most</span> while building systems for everything else.
+          <span className="text-gold-400">Partnering for Leadership Impact</span>
         </h2>
-        <p className="text-gray-300 max-w-md text-base md:text-lg leading-relaxed">
-          Leaders engage with Milestone Leadership in different ways, depending on their goals, capacity, and the challenges they&apos;re facing. We offer three ways to work together.
-        </p>
+        <div className="text-gray-300 max-w-xl text-base md:text-lg leading-relaxed">
+          <p className="mb-4">
+            Milestone Leadership works with leaders through a single, evolving partnership focused on elevating leadership impact. We focus on strengthening leadership judgment, focus, and effectiveness, as well as leading with vision, mission and values.
+          </p>
+          <p>
+            As leaders grow, two common challenges often surface: sustaining elevated impact over time and operating at the right strategic level. When we identify either as a constraint to your leadership impact, the focus of our partnership shifts to address it directly, ensuring impact is not only increased, but enduring and strategic.
+          </p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
           {
-            title: "Leadership Focus Coaching",
-            desc: "Leadership Focus Coaching is for leaders who want to elevate their effectiveness, expand their influence, and operate more strategically. We focus on strengthening leadership judgment, communication, and decision-making so leaders can have greater impact across their teams and organizations. The work helps leaders move from execution-heavy roles to higher-leverage leadership.",
-            sub: "For leaders who need to clarify priorities, reduce noise, and focus their time and energy where it matters most."
+            title: "Elevating Leadership Impact",
+            desc: "This is the foundation of our work together. We focus on strengthening leadership judgment, expanding influence, and helping leaders operate at a higher level across their teams and organizations. The emphasis is on clarity, focus, and consistently directing effort toward the decisions and actions that matter most."
           },
           {
-            title: "Sustained Impact Coaching",
-            desc: "Sustained Impact Coaching supports leaders who are finding it difficult to elevate—or maintain—their level of impact without compromising their physical, mental, or social health. This work helps leaders align ambition with capacity, building habits and rhythms that support high performance over time. The goal is impact that is not only meaningful, but sustainable.",
-            sub: "For leaders who want to increase their impact without sacrificing their health, relationships, or long-term effectiveness."
+            title: "Sustaining Leadership Impact",
+            desc: "As leadership demands increase, impact can begin to come at the expense of energy, health, or relationships. When this happens, the partnership shifts toward endurance—helping leaders maintain elevated impact over time without burning out or narrowing their lives. The goal is leadership that holds up under pressure and across seasons."
           },
           {
-            title: "Fractional Leadership Partnership",
-            desc: "The Fractional Leadership Partnership is for leaders and organizations that need more than coaching—they need help increasing leverage. We work together to design systems, decision frameworks, and operating rhythms that reduce dependency on the leader and allow impact to scale. This partnership is especially valuable during periods of growth, transition, or when launching something new.",
-            sub: "For leaders and organizations who need support building systems, leverage, and capacity to support elevated leadership impact."
+            title: "Strengthening Strategic Leadership Impact",
+            desc: "In some cases, the limiting factor isn't effort or capability—it's where leaders are spending their time. When leaders are too deeply embedded in tactical execution, the partnership shifts toward strategy. This includes redefining responsibilities, strengthening decision-making, and helping leaders operate more consistently in the most strategic aspects of their role."
           }
         ].map((service, idx) => (
           <div key={idx} className="bg-slate-800/50 border border-slate-700 p-8 rounded-2xl hover:border-gold-400/50 transition-colors group h-full flex flex-col">
             <h3 className="font-serif text-2xl text-gold-400 mb-6">{service.title}</h3>
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed flex-grow">{service.desc}</p>
-            <div className="pt-6 border-t border-slate-700">
-              <p className="text-gray-400 text-xs italic">{service.sub}</p>
-            </div>
+            <p className="text-gray-300 text-sm leading-relaxed flex-grow">{service.desc}</p>
           </div>
         ))}
       </div>
