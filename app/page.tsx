@@ -15,7 +15,7 @@ const Navbar = () => {
     { id: 'how-we-work', label: 'HOW WE WORK', href: '#how-we-work', isPage: false },
     { id: 'team', label: 'TEAM', href: '/team', isPage: true },
     { id: 'insights', label: 'INSIGHTS', href: '/blog', isPage: true },
-    { id: 'speaking', label: 'SPEAKING & EVENTS', href: '#speaking', isPage: false },
+    { id: 'speaking', label: 'SPEAKING & EVENTS', href: '/speaking', isPage: true },
   ];
 
   return (
@@ -329,9 +329,14 @@ const Speaking = () => (
         <p className="text-gray-300 text-base leading-relaxed mb-8">
           Explore recordings from past talks and workshops, or sign up to be notified about upcoming events.
         </p>
-        <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
-          SCHEDULE A CALL
-        </button>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/speaking" className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide inline-block">
+            VIEW PAST EVENTS
+          </Link>
+          <a href="mailto:contact@milestoneleadership.com" className="px-8 py-4 bg-gold-400 text-slate-900 rounded-full hover:bg-gold-300 transition-all font-semibold tracking-wide inline-block">
+            BOOK MIKE
+          </a>
+        </div>
       </div>
       <div className="flex justify-center md:justify-end">
          {/* Optional: Add a person image here if needed, or keep text focused */}

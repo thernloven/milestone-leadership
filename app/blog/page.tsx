@@ -83,7 +83,7 @@ const Navbar = () => (
         <Link href="/" className="hover:text-gold-400 transition-colors">HOME</Link>
         <Link href="/#services" className="hover:text-gold-400 transition-colors">SERVICES</Link>
         <Link href="/blog" className="hover:text-gold-400 transition-colors underline decoration-gold-400 underline-offset-4">INSIGHTS</Link>
-        <Link href="/#speaking" className="hover:text-gold-400 transition-colors">SPEAKING & EVENTS</Link>
+        <Link href="/speaking" className="hover:text-gold-400 transition-colors">SPEAKING & EVENTS</Link>
       </div>
     </div>
   </nav>

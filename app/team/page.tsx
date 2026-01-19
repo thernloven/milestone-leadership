@@ -14,7 +14,7 @@ const Navbar = () => {
     { id: 'how-we-work', label: 'HOW WE WORK', href: '/#how-we-work' },
     { id: 'team', label: 'TEAM', href: '/team' },
     { id: 'insights', label: 'INSIGHTS', href: '/#insights' },
-    { id: 'speaking', label: 'SPEAKING & WEBINARS', href: '/#speaking' },
+    { id: 'speaking', label: 'SPEAKING & EVENTS', href: '/speaking' },
   ];
 
   return (
