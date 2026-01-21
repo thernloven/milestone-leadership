@@ -235,9 +235,7 @@ const Footer = () => (
   <footer className="bg-slate-950 text-slate-500 py-12 px-4 text-center text-sm">
     <div className="mb-6 font-serif text-2xl text-slate-400">MILESTONE LEADERSHIP</div>
     <div className="flex justify-center gap-6 mb-8">
-      <a href="#" className="hover:text-gold-400">LinkedIn</a>
-      <a href="#" className="hover:text-gold-400">Twitter</a>
-      <a href="#" className="hover:text-gold-400">Instagram</a>
+      <a href="https://www.linkedin.com/in/mike-j-miles/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400">LinkedIn</a>
     </div>
     <p>&copy; {new Date().getFullYear()} Milestone Leadership. All rights reserved.</p>
   </footer>

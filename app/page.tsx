@@ -132,7 +132,7 @@ const Services = () => (
       </div>
 
       <div className="text-center mt-12">
-        <a href="mailto:contact@milestoneleadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
+        <a href="mailto:info@milestone-leadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
           GET IN TOUCH
         </a>
       </div>
@@ -250,7 +250,7 @@ const Benefits = () => (
       </div>
 
       <div className="text-center mt-10">
-        <a href="mailto:contact@milestoneleadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
+        <a href="mailto:info@milestone-leadership.com" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
           GET IN TOUCH
         </a>
       </div>
@@ -333,7 +333,7 @@ const Speaking = () => (
           <Link href="/speaking" className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide inline-block">
             VIEW PAST EVENTS
           </Link>
-          <a href="mailto:contact@milestoneleadership.com" className="px-8 py-4 bg-gold-400 text-slate-900 rounded-full hover:bg-gold-300 transition-all font-semibold tracking-wide inline-block">
+          <a href="mailto:info@milestone-leadership.com" className="px-8 py-4 bg-gold-400 text-slate-900 rounded-full hover:bg-gold-300 transition-all font-semibold tracking-wide inline-block">
             BOOK MIKE
           </a>
         </div>
@@ -373,9 +373,7 @@ const Footer = () => (
   <footer className="bg-slate-950 text-slate-500 py-12 px-4 text-center text-sm">
     <div className="mb-6 font-serif text-2xl text-slate-400">MILESTONE LEADERSHIP</div>
     <div className="flex justify-center gap-6 mb-8">
-      <a href="#" className="hover:text-gold-400">LinkedIn</a>
-      <a href="#" className="hover:text-gold-400">Twitter</a>
-      <a href="#" className="hover:text-gold-400">Instagram</a>
+      <a href="https://www.linkedin.com/in/mike-j-miles/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400">LinkedIn</a>
     </div>
     <p>&copy; {new Date().getFullYear()} Milestone Leadership. All rights reserved.</p>
   </footer>
