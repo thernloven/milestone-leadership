@@ -353,9 +353,9 @@ export default function BlogPost() {
         <div className="mt-16 p-8 bg-slate-800/50 border border-slate-700 rounded-2xl text-center">
           <h3 className="font-serif text-2xl text-white mb-4">Ready to elevate your leadership?</h3>
           <p className="text-gray-400 mb-6">Let&apos;s explore how we can work together to create lasting impact.</p>
-          <button className="px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
+          <a href="https://calendly.com/michaeljmiles/milestone-intro" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-transparent border border-gold-400 text-gold-400 rounded-full hover:bg-gold-400 hover:text-slate-900 transition-all font-semibold tracking-wide">
             SCHEDULE A CALL
-          </button>
+          </a>
         </div>
       </article>
 

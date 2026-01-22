@@ -193,9 +193,9 @@ const HowWeWork = () => (
       </div>
 
       <div className="text-center mt-16">
-        <button className="px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
+        <a href="https://calendly.com/michaeljmiles/milestone-intro" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-slate-900 transition-all font-semibold tracking-wide">
           SCHEDULE A CALL
-        </button>
+        </a>
       </div>
     </div>
   </section>
