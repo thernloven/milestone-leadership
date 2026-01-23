@@ -45,20 +45,66 @@ const Navbar = () => {
   );
 };
 
+/* --- TEAM MEMBER CARD --- */
+const TeamMemberCard = ({
+  name,
+  role,
+  image,
+  bio,
+  reverse = false
+}: {
+  name: string;
+  role: string;
+  image: string;
+  bio: string[];
+  reverse?: boolean;
+}) => (
+  <div className={`bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-gold-400/50 transition-colors group flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+    {/* Image */}
+    <div className="relative h-80 lg:h-auto lg:w-80 flex-shrink-0 overflow-hidden">
+      <Image
+        src={image}
+        alt={name}
+        fill
+        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+
+    {/* Content */}
+    <div className="p-8 lg:p-10 flex-grow">
+      <h3 className="font-serif text-3xl text-white mb-2">{name}</h3>
+      <p className="text-gold-400 font-medium mb-6">{role}</p>
+      <div className="space-y-4">
+        {bio.map((paragraph, idx) => (
+          <p key={idx} className="text-gray-400 leading-relaxed text-sm">{paragraph}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 /* --- TEAM SECTION --- */
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Michael Miles",
-      role: "Founder & Executive Coach",
+      name: "Mike Miles",
+      role: "Founder, Fractional Exec and Executive Coach",
       image: "/mikeheadshot.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      bio: [
+        "Throughout his career, Mike has led a diverse range of startup, software, and social initiatives, with results driven by the integration of emotional intelligence, analytical rigor, and strategic judgment—while maintaining the balance required to sustain leadership effectiveness over time.",
+        "As a senior leader in the software industry, he built and led international organizations, drove innovation through internationally patented technologies, and helped guide both startups and mature businesses within and beyond Microsoft. More recently, his work has focused on global social impact, including founding Microsoft's Community Development program, which supported more than 50 communities worldwide.",
+        "Since retiring after a 20-year career at Microsoft, Mike has focused on partnering with accomplished leaders as the scale and stakes of their roles increase—helping them enhance and sustain their impact while operating at the right strategic level. His work includes fractional executive roles, board service with a social impact accelerator, mentoring leaders at the University of Arizona, and advising and investing in early- and growth-stage nonprofit and for-profit ventures, with a strong interest in impact-focused work. He brings this perspective to his work through endurance running, using the principles of long-term preparation, recovery, and pacing as a practical lens for sustainable leadership performance."
+      ]
     },
     {
-      name: "Elizabeth",
-      role: "Leadership Consultant",
+      name: "Elizabeth Westphal",
+      role: "Chief of Staff and Leadership Coach",
       image: "/mikeheadshot.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      bio: [
+        "Throughout her career, Elizabeth has led complex programs and teams in fast-paced environments, bringing clarity, structure, and momentum to work that spans people, process, and strategy. She is known for navigating ambiguity, translating big-picture goals into executable plans, and ensuring that details, timelines, and stakeholders remain aligned as organizations grow. After retiring from a 25-year career at Microsoft, Elizabeth joined Milestone.",
+        "At Milestone, Elizabeth serves as a core partner to leaders and clients, helping operationalize strategy and turn insight into action. She pairs strong business acumen with exceptional communication and people skills, building trust across roles and functions while creating the operating rhythms that enable sustained performance. Her work strengthens execution without losing sight of the humans behind the work.",
+        "Elizabeth plays a critical role in supporting Milestone's leadership engagements—bringing focus, follow-through, and a steady presence to complex initiatives. By combining strategic perspective with disciplined execution, she helps leaders move forward with confidence, stay centered on what matters most, and deliver results in environments where clarity and accountability are essential."
+      ]
     }
   ];
 
@@ -67,31 +113,21 @@ const TeamSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="font-serif text-5xl md:text-6xl text-white mb-6">Meet Our Team</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+            We partner with leaders to help them magnify their impact while staying aligned with what matters most.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="space-y-8">
           {teamMembers.map((member, idx) => (
-            <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-gold-400/50 transition-colors group">
-              {/* Image */}
-              <div className="relative h-80 w-full overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-8">
-                <h3 className="font-serif text-3xl text-white mb-2">{member.name}</h3>
-                <p className="text-gold-400 font-medium mb-4">{member.role}</p>
-                <p className="text-gray-400 leading-relaxed">{member.description}</p>
-              </div>
-            </div>
+            <TeamMemberCard
+              key={idx}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+              reverse={idx % 2 === 1}
+            />
           ))}
         </div>
       </div>
